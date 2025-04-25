@@ -21,10 +21,7 @@ export class VehicledetailsComponent {
 
   this.vehicle=this.service.getVehicleById(this.vehicleid);
     console.log(this.vehicle)
-
-
   }
-
   addtocart(vobj:any){
     this.cartService.addtocart(vobj);
   }
