@@ -31,7 +31,7 @@
           
                 <button class="btn btn-info">Book Now</button>
         
-                <button class="btn btn-secondary"><i class="fa fa-heart"></i></button>
+                <button class="btn btn-secondary" (click)="addtofav()"><i class="fa fa-heart" [ngClass]="{fav:flag}"></i></button>
             </div>
         </div>
     </div>

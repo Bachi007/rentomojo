@@ -1,1 +1,60 @@
-<p>cart works!</p>
+<h2>Cart</h2>
+
+<table class="table table-bordered">
+<tr>
+    <th>Id</th>
+    <th>Name</th>
+    <th>Image</th>
+    <th>Price</th>
+</tr>
+<tr *ngFor="let c of cartitems">
+    <td>{{c.id}}</td>
+    <td>{{c.name}}</td>
+    <td><img [src]="c.imageUrl" height="100" width="100" alt=""></td>
+    <td>{{c.pricePerDay}}</td>
+    <td><button class="btn btn-warning" (click)="addtotemp(c)" data-bs-toggle
+        ="modal" data-bs-target="#bookingmodal">Buy Now</button></td>
+
+</tr>
+    <tr>
+        <td colspan="4">Total :{{total}} </td>
+    </tr>
+</table>
+
+<div *ngIf="temp">
+    <div class="modal fade" id="bookingmodal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1>Book Now</h1>
+                    <button class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group">
+                        <label for="" class="form-label">Vehicle Id</label>
+                        <input type="text" [(ngModel)]="temp.id" class="form-control" disabled="">
+                    </div>
+                    <div class="form-group">
+                        <label for="" class="form-label">Vehicle Name</label>
+                        <input type="text" [(ngModel)]="temp.name" class="form-control" disabled="">
+                    </div>
+                    <div class="form-group">
+                        <label for="" class="form-label">Vehicle Id</label>
+                        <input type="text" [(ngModel)]="temp.pricePerDay" class="form-control" disabled="">
+                    </div>
+                    <div class="form-group">
+                        <label for="" class="form-label">username</label>
+                        <input type="text" [(ngModel)]="username" class="form-control" disabled="">
+                    </div>
+                    <div class="form-group">
+                        <label for="" class="form-label">Address</label>
+                        <textarea [(ngModel)]="address" class="form-control"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <button class="btn btn-primary" (click)="booknow()" data-bs-dismiss="modal">Book Now</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

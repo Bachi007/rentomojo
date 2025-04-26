@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { VehicleService } from '../services/vehicle.service';
 import { CartService } from '../services/cart.service';
 
@@ -13,7 +13,13 @@ export class VehicledetailsComponent {
 
   vehicleid:any;vehicle:any;
 
-  constructor(private act:ActivatedRoute,private service:VehicleService,private cartService:CartService){}
+  flag=false;
+
+  addtofav(){
+    this.flag=!this.flag
+  }
+
+  constructor(private act:ActivatedRoute,private service:VehicleService,private cartService:CartService,private bs:Router){}
   
   ngOnInit(){
     this.vehicleid=this.act.snapshot.paramMap.get('vid')
@@ -24,6 +30,7 @@ export class VehicledetailsComponent {
   }
   addtocart(vobj:any){
     this.cartService.addtocart(vobj);
+    this.bs.navigateByUrl("/user/cart")
   }
 
 

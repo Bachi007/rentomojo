@@ -1,1 +1,17 @@
-<p>vieworders works!</p>
+<h2>Cart</h2>
+
+<table class="table table-bordered">
+<tr>
+    <th>Id</th>
+    <th>Name</th>
+    <th>Image</th>
+    <th>Price</th>
+    <th>Delivery at</th>
+</tr>
+<tr *ngFor="let c of orders">
+    <td>{{c.id}}</td>
+    <td>{{c.name}}</td>
+    <td><img [src]="c.imageUrl" height="100" width="100" alt=""></td>
+    <td>{{c.pricePerDay}}</td>
+    <td>{{c.address}}</td>
+</table>
