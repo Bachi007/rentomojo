@@ -35,3 +35,17 @@ This project was generated using [Angular CLI](https://github.com/angular/angula
 15. when add to cart button is clicked vehicleDetails comp add object to cart service using addtocart method
 
 16. in userdashboard compt ts call getCartLen method to get length of array whenever any minm change is detected using ngDoCheck
+
+17. display all the vehicles that added in the cart by calling getcartitems service method in cart.comp.ts
+
+18. add book now button for every cart element and if book now button is clicked 
+perform two things one is store selected vehicle in temp and load temp data in booking modal in cart.comp.html
+
+19. create orders array and methods like placeorder, getallorders, getOrdersbyUsername methods in wishlist.service.ts
+
+20.  now display selected vehicle details and username (get it from localstorage) and address in the booking modal
+
+21. now create booking() method cart.compt.ts to create and store object in placeorder service method 
+
+22. after successful order placing navigate to my orders component and display all the orders by username (get it from localstorage) along with delivery address 
+
