@@ -1,0 +1,15 @@
+.container-fluid{
+    margin: 0px;
+    padding:0px;
+}
+.nav-item{
+    margin-top:25px;
+    margin-left: 10px;
+}
+.navbar-nav{
+    position: absolute;
+    top:0px;
+}
+nav{
+    height: 695px;
+}

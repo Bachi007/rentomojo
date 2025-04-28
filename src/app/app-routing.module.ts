@@ -9,6 +9,8 @@ import { CartComponent } from './cart/cart.component';
 import { AdmindashboardComponent } from './admindashboard/admindashboard.component';
 import { AdminhomeComponent } from './adminhome/adminhome.component';
 import { VehicledetailsComponent } from './vehicledetails/vehicledetails.component';
+import { AddvehiclesComponent } from './addvehicles/addvehicles.component';
+import { ManageComponent } from './manage/manage.component';
 
 const routes: Routes = [
   {path:"",component:LoginComponent},
@@ -23,7 +25,10 @@ const routes: Routes = [
   },
   {path:'admin',component:AdmindashboardComponent,
     children:[
-      {path:'home',component:AdminhomeComponent}
+      {path:'home',component:AdminhomeComponent},
+      {path:'add',component:AddvehiclesComponent},
+      {path:'manage',component:ManageComponent},
+      {path:'view',component:ViewvehiclesComponent}
     ]
   },
 

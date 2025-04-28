@@ -174,5 +174,8 @@ export class VehicleService {
     return this.vehicles.find((e)=>e.id==vid);
   }
 
-
+  addVehicle(obj:any){
+    this.vehicles.push(obj);
+    return "Added successfully"
+  }
 }

@@ -1,0 +1,19 @@
+<form class="example-form" [formGroup]="addVehicleForm" (ngSubmit)="addnow()">
+    <mat-form-field class="example-full-width">
+      <mat-label>Vehicle Id</mat-label>
+      <input matInput placeholder="Ex. B001" formControlName="id">
+    </mat-form-field>
+    <br>
+    <mat-form-field class="example-full-width">
+        <mat-label>Vehicle Name</mat-label>
+        <input matInput placeholder="Ex. BMW 1250GS" formControlName="name">
+      </mat-form-field>
+   
+      <div class="form-group">
+        <button type="submit">Add</button>
+        <button type="reset">Cancel</button>
+      </div>
+      
+    
+  </form>
+  

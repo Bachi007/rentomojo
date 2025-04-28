@@ -14,7 +14,11 @@ import { CartComponent } from './cart/cart.component';
 import { AdminhomeComponent } from './adminhome/adminhome.component';
 import { ViewordersComponent } from './vieworders/vieworders.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-
+import { AddvehiclesComponent } from './addvehicles/addvehicles.component';
+import { ManageComponent } from './manage/manage.component';
+import {MatInputModule} from '@angular/material/input';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatSnackBar} from '@angular/material/snack-bar';
 @NgModule({
   declarations: [
     AppComponent,
@@ -27,11 +31,14 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     WishlistComponent,
     CartComponent,
     AdminhomeComponent,
-    ViewordersComponent
+    ViewordersComponent,
+    AddvehiclesComponent,
+    ManageComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,FormsModule, ReactiveFormsModule
+    AppRoutingModule,FormsModule, ReactiveFormsModule,
+    MatInputModule,MatFormFieldModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
